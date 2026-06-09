@@ -1,0 +1,87 @@
+
+<html lang="en">
+<body>
+  <h1>Data Kendaraan Aktif</h1>
+  <button onclick="loadData()">Load Data</button>
+  <div id="dataContainer"></div>
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>No Plat</th>
+      <th>Nama</th>
+      <th>Time In</th>
+      <th>Time Out</th>
+    </tr>
+  </thead>
+
+  <tbody id="tableBody">
+
+  </tbody>
+</table>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>/*
+  const supabaseUrl = "https://ppcpkgycxqvvzelxeaxc.supabase.co";
+  const supabaseKey = "sb_publishable_vjAxDgEB0K4PWEuHQD6oQw_vY3eaY-I";
+
+  const db = supabase.createClient(supabaseUrl, supabaseKey);
+
+  async function getAllData() {
+  const { data, error } = await db
+    .from("mainTable")
+    .select("*");
+
+  console.log("DATA:", data);
+  console.log("ERROR:", error);
+}
+
+getAllData();
+/*
+async function testConnection() {
+  const { data, error } = await db
+    .from("mainTable")
+    .select("*")
+    .limit(1);
+
+  console.log("DATA:", data);
+  console.log("ERROR:", error);
+}
+
+testConnection();
+
+async function tambahData() {
+  const { data, error } = await db
+    .from("mainTable")
+    .insert([
+      {
+        noPlat: "B1234ABC",
+        nama: "Test User",
+        jenisContainer: "20FT",
+        statusWH: "IN",
+        timeIn: new Date().toISOString(),
+        timeOut: null
+      }
+    ])
+    .select();
+
+  console.log("INSERT DATA:", data);
+  console.log("INSERT ERROR:", error);
+}
+
+tambahData();*/
+
+async function loadKendaraanAktif() {
+  const { data, error } = await db
+    .from("mainTable")
+    .select("*");
+
+  if (error) {
+    console.log(error);
+    return;
+  }
+
+  console.log(data);
+}
+</script>
+</html>
