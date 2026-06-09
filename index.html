@@ -1,6 +1,6 @@
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
-<script>
+<script>/*
   const supabaseUrl = "https://ppcpkgycxqvvzelxeaxc.supabase.co";
   const supabaseKey = "sb_publishable_vjAxDgEB0K4PWEuHQD6oQw_vY3eaY-I";
 
@@ -37,7 +37,21 @@ async function tambahData() {
   console.log("INSERT ERROR:", error);
 }
 
-tambahData();
+tambahData();*/
 
+async function loadKendaraanAktif() {
+  const { data, error } = await db
+    .from("mainTable")
+    .select("*")
+    .is("timeOut", null);
+
+  if (error) {
+    console.log(error);
+    return;
+  }
+
+  console.log(data);
+}
+  
 </script>
 
