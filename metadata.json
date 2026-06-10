@@ -1,0 +1,6 @@
+{
+  "name": "Warehouse Vehicle Management System",
+  "description": "Sistem Manajemen Kendaraan Gudang real-time untuk mendata, melacak, dan mengelola kendaraan masuk-keluar dengan integrasi Supabase Database dan Realtime.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
