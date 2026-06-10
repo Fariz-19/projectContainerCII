@@ -2,9 +2,13 @@ import 'index.css';
 import { createClient } from '@supabase/supabase-js';
 
 // --- DATABASE STATE & CONFIG ---
-let supabaseUrl = localStorage.getItem('supabase_url') || import.meta.env.VITE_SUPABASE_URL || '';
-let supabaseAnonKey = localStorage.getItem('supabase_anon_key') || import.meta.env.VITE_SUPABASE_ANON_KEY || '';
-let supabaseClient = null;
+let supabaseUrl = 'https://ppcpkgycxqvvzelxeaxc.supabase.co';
+let supabaseAnonKey = 'sb_publishable_vjAxDgEB0K4PWEuHQD6oQw_vY3eaY-I';
+
+let supabaseClient = createClient(
+  supabaseUrl,
+  supabaseAnonKey
+);
 
 // Initialize Supabase Client if possible
 function initSupabase() {
