@@ -252,27 +252,13 @@
 
                 <div>
                   <label class="block text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1.5">
-                    Notes
-                  </label>
-                  <div class="relative">
-                    <input
-                      type="text"
-                      id="notes-input"
-                      placeholder="Catatan tambahan"
-                      class="w-full px-4 py-2.5 bg-slate-50 border border-slate-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500/10 focus:border-indigo-500 focus:bg-white transition-all font-medium"
-                    />
-                  </div>
-                </div>
-
-                <div>
-                  <label class="block text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1.5">
-                    Nomor Surat Jalan
+                    Nomor Seal
                   </label>
                   <div class="relative">
                     <input
                       type="text"
                       id="no-surat-jalan-input"
-                      placeholder="SJ-XXXX-XXXX"
+                      placeholder="Nomor Seal"
                       required
                       class="w-full px-4 py-2.5 bg-slate-50 border border-slate-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500/10 focus:border-indigo-500 focus:bg-white transition-all font-mono"
                     />
@@ -281,14 +267,36 @@
 
                 <div>
                   <label class="block text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1.5">
-                    ID Row / Alokasi Dermaga
+                    Type kedatangan
                   </label>
                   <div class="relative">
                     <input
                       type="text"
+                      list="type-kedatangan-datalist"
                       id="id-row-input"
-                      placeholder="ROW-A1 (General)"
+                      placeholder="Export/Import"
                       class="w-full px-4 py-2.5 bg-slate-50 border border-slate-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500/10 focus:border-indigo-500 focus:bg-white transition-all font-mono font-bold"
+                    />
+                    <datalist id="type-kedatangan-datalist">
+                      <option value="Export"></option>
+                      <option value="Import"></option>
+                      <option value="Local"></option>
+                      <option value="STO"></option>
+                      <option value="Lainnya"></option>
+                    </datalist>
+                  </div>
+                </div>
+
+                <div>
+                  <label class="block text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1.5">
+                    Notes
+                  </label>
+                  <div class="relative">
+                    <input
+                      type="text"
+                      id="notes-input"
+                      placeholder="Catatan tambahan"
+                      class="w-full px-4 py-2.5 bg-slate-50 border border-slate-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500/10 focus:border-indigo-500 focus:bg-white transition-all font-medium"
                     />
                   </div>
                 </div>
