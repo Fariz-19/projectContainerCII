@@ -4,8 +4,34 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Warehouse Vehicle Management System</title>
-    <link rel="stylesheet" url="index.css">
-    
+    <!-- Tailwind CSS Play CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['"Plus Jakarta Sans"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+              mono: ['"JetBrains Mono"', 'ui-monospace', 'monospace'],
+            },
+            colors: {
+              indigo: {
+                650: '#4f46e5',
+                750: '#4338ca',
+              },
+              slate: {
+                450: '#64748b',
+                850: '#1e293b',
+                950: '#0f172a',
+              }
+            },
+            boxShadow: {
+              '3xs': '0 1px 1.5px rgba(0,0,0,0.03)',
+            }
+          }
+        }
+      }
+    </script>
   </head>
   <body>
     
@@ -550,7 +576,7 @@ ALTER PUBLICATION supabase_realtime ADD TABLE vehicles;</pre>
     </div>
 
     <!-- Main ES module bundle script executed by Vite -->
-    <script type="module" src="main.js"></script>
+    <script type="module" src="/src/main.js"></script>
 
   </body>
 </html>
