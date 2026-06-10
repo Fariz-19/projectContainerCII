@@ -1,4 +1,4 @@
-import '/index.css';
+import '../index.css';
 import { createClient } from '@supabase/supabase-js';
 
 // --- DATABASE STATE & CONFIG ---
