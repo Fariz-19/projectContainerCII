@@ -3,7 +3,7 @@
 // Karena ini file frontend statis, nilai ini akan terlihat oleh browser/GitHub Pages.
 // Supabase anon key memang boleh dipakai di frontend, asalkan RLS/policy database sudah kamu atur dengan benar.
 const SUPABASE_URL = 'https://ppcpkgycxqvvzelxeaxc.supabase.co';
-const SUPABASE_ANON_KEY = 'ISI_ANON_KEY_SUPABASE_KAMU_DI_SINI';
+const SUPABASE_ANON_KEY = 'sb_publishable_vjAxDgEB0K4PWEuHQD6oQw_vY3eaY-I';
 
 let supabaseUrl = localStorage.getItem('supabase_url') || SUPABASE_URL || '';
 let supabaseAnonKey = localStorage.getItem('supabase_anon_key') || SUPABASE_ANON_KEY || '';
