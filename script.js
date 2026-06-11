@@ -733,3 +733,9 @@ document.addEventListener('DOMContentLoaded', () => {
   // Load first data
   refreshData();
 });
+
+window.addEventListener('beforeunload', () => {
+  if (vehicleService.activeSubscription) {
+    supabaseClient.removeChannel(vehicleService.activeSubscription);
+  }
+});
